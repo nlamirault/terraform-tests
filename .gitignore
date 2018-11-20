@@ -1,6 +1,6 @@
 # Terraform
 github/.terraform/
-github/*.tfvars
+github/*/*.tfvars
 gitlab/.terraform/
 gitlab/*.tfvars
 
