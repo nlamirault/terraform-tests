@@ -4,9 +4,9 @@ github/*.tfvars
 gitlab/.terraform/
 gitlab/*.tfvars
 
-foo/.terraform
-foo/*.tfstate
-foo/*.tfstate.backup
+github/foo/.terraform
+github/foo/*.tfstate
+github/foo/*.tfstate.backup
 
 # Editors
 .vscode
