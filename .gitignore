@@ -1,0 +1,14 @@
+# Terraform
+github/.terraform/
+github/*.tfvars
+gitlab/.terraform/
+gitlab/*.tfvars
+
+foo/.terraform
+foo/*.tfstate
+foo/*.tfstate.backup
+
+# Editors
+.vscode
+*~
+
