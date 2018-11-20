@@ -12,23 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-variable "name" {
-  type = "string"
-}
-
-variable "description" {
-  type = "string"
-}
-
-variable "private" {
-  default = false
-}
-
-variable "auto_init" {
-  default = true
-}
-
-variable "topics" {
-  type    = "list"
-  default = []
+output "full_name" {
+  value = "github_repository.repository.fullname"
 }
