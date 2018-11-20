@@ -12,24 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-terraform {
-  required_version = ">= 0.11.0"
-}
-
-module "foo-team" {
-  source             = "../modules/team"
-  name               = "The Foo Team"
-  maintainer_members = ["nlamirault"]
-}
-
-module "kanban-project" {
-  source = "../modules/project"
-  name   = "Kanban Project"
-}
-
-module "foo-repo" {
-  source      = "../modules/repository"
-  name        = "foo"
-  description = "A Foo project"
-  topics      = ["foo", "bar"]
+provider "github" {
+  token        = "${var.github_token}"
+  organization = "${var.github_organization}"
 }

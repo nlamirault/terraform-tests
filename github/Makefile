@@ -34,6 +34,8 @@ init-terraform:
 	@echo -e "$(OK_COLOR)[$(APP)] Initialize Terraform dependencies$(NO_COLOR)"
 	terraform init -upgrade
 	cd foo && terraform init
+	cd pilotariak && terraform init
+	cd zeiot && terraform init
 	cd nlamirault && terraform init
 
 .PHONY: init

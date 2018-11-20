@@ -12,24 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-terraform {
-  required_version = ">= 0.11.0"
+variable "github_token" {
+  description = "(Optional) This is the GitHub personal access token."
 }
 
-module "foo-team" {
-  source             = "../modules/team"
-  name               = "The Foo Team"
-  maintainer_members = ["nlamirault"]
-}
-
-module "kanban-project" {
-  source = "../modules/project"
-  name   = "Kanban Project"
-}
-
-module "foo-repo" {
-  source      = "../modules/repository"
-  name        = "foo"
-  description = "A Foo project"
-  topics      = ["foo", "bar"]
+variable "github_organization" {
+  description = "(Optional) This is the target GitHub organization to manage."
 }
