@@ -12,21 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-terraform {
-  required_version = ">= 0.11.0"
+module "foo-team" {
+  source             = "../modules/team"
+  name               = "The Foo Team"
+  maintainer_members = ["nlamirault"]
+}
 
-  backend "s3" {
-    bucket                      = "${var.s3_bucket}"
-    key                         = "${var.s3_key}"
-    region                      = "${var.s3_region}"
-    endpoint                    = "${var.S3_endpoint}"
-    skip_region_validation      = true
-    skip_credentials_validation = true
-  }
+module "kanban-project" {
+  source = "../modules/project"
+  name   = "Kanban Project"
+}
 
-  # backend "consul" {
-  #   address = "${var.consul_address}"
-  #   scheme  = "${var.consul_address}"
-  #   path    = "${var.consul_path}"
-  # }
+module "foo-repo" {
+  source      = "../modules/repository"
+  name        = "foo"
+  description = "A Foo project"
+  topics      = ["foo", "bar"]
 }
