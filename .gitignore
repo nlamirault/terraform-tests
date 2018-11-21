@@ -18,6 +18,10 @@ github/pilotariak/.terraform
 github/pilotariak/*.tfstate
 github/pilotariak/*.tfstate.backup
 
+gitlab/foo/.terraform
+gitlab/foo/*.tfstate
+gitlab/foo/*.tfstate.backup
+
 # Editors
 .vscode
 *~
