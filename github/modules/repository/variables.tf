@@ -23,13 +23,13 @@ variable "description" {
 }
 
 variable "private" {
-  type        = "boolean"
+  type        = "string"
   description = "(Optional) Visibility of the project."
   default     = false
 }
 
 variable "auto_init" {
-  type        = "boolean"
+  type        = "string"
   description = "(Optional) Produce an initial commit or not."
   default     = true
 }
