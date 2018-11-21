@@ -22,6 +22,10 @@ gitlab/foo/.terraform
 gitlab/foo/*.tfstate
 gitlab/foo/*.tfstate.backup
 
+gitlab/zeiot/.terraform
+gitlab/zeiot/*.tfstate
+gitlab/zeiot/*.tfstate.backup
+
 # Editors
 .vscode
 *~
