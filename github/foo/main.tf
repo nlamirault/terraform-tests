@@ -15,18 +15,18 @@
 terraform {
   required_version = ">= 0.11.0"
 
-  backend "s3" {
-    bucket                      = "${var.s3_bucket}"
-    key                         = "${var.s3_key}"
-    region                      = "${var.s3_region}"
-    endpoint                    = "${var.S3_endpoint}"
-    skip_region_validation      = true
-    skip_credentials_validation = true
-  }
+  # backend "s3" {
+  #   bucket                      = "galactus"
+  #   key                         = "foo"
+  #   region                      = ""
+  #   endpoint                    = ""
+  #   skip_region_validation      = true
+  #   skip_credentials_validation = true
+  # }
 
   # backend "consul" {
-  #   address = "${var.consul_address}"
-  #   scheme  = "${var.consul_address}"
-  #   path    = "${var.consul_path}"
+  #   address = ""
+  #   scheme  = "https"
+  #   path    = "galactus/foo"
   # }
 }
