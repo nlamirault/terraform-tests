@@ -1,6 +1,19 @@
 # Galactus
 
-Define your project, organizations, teams on Github or Gitlab using Terraform.
+<img src="https://github.com/nlamirault/galactus/raw/master/galactus.svg" width="100">
+
+Terraforming ...
+
+## Kubernetes
+
+* [ ] Kubernetes Cluster in Google Kubernetes Engine (GKE)
+* [ ] Kubernetes Cluster in Azure Container Service (AKS)
+
+## Source code
+
+* [x] Define your projects, organizations, teams on Github
+* [ ] Define your projects, groups on Gitlab
+
 
 ## Changelog
 
