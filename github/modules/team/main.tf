@@ -13,9 +13,9 @@
 # limitations under the License.
 
 resource "github_team" "team" {
-  name    = "${var.name}"
+  name        = "${var.name}"
   description = "${var.description}"
-  privacy = "${var.privacy}"
+  privacy     = "${var.privacy}"
 }
 
 resource "github_team_membership" "maintainer_members" {

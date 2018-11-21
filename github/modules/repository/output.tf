@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+// Name of the repository
 output "full_name" {
   value = "github_repository.repository.fullname"
 }

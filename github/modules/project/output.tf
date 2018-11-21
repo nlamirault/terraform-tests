@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+// Project name and his URL
 output "info" {
   value = {
     name = "${github_organization_project.project.name}"
