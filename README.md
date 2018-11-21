@@ -12,7 +12,7 @@ Terraforming ...
 ## Source code
 
 * [x] Define your projects, organizations, teams on Github
-* [ ] Define your projects, groups on Gitlab
+* [x] Define your projects, groups on Gitlab
 
 
 ## Changelog
