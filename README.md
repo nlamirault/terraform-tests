@@ -1,6 +1,6 @@
 # Galactus
 
-<img src="https://github.com/nlamirault/galactus/raw/master/galactus.svg" width="100">
+<img src="https://github.com/nlamirault/galactus/raw/master/galactus.png" width="100">
 
 Terraforming ...
 
