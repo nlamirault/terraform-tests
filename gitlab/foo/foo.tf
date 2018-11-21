@@ -12,10 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+resource "gitlab_group" "group" {
+  name = "galactus-gitlab"
+  path = "galactus-gitlab"
+  visibility_level = "public"
+}
+
 module "bar-project" {
-  source       = "../modules/project"
-  group_name   = "galactus-gitlab"
-  group_path   = "galactus-gitlab"
-  project_name         = "bar"
-  project_description  = "The bar project for Galactus Foo"
+  source     = "../modules/project"
+  group_name = "galactus-gitlab"
+  project_name        = "bar"
+  namespace_id = "${gitlab_group.group.id}"
+  project_description = "The bar project for Galactus Foo"
 }

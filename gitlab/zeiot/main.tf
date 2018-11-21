@@ -12,12 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# output "group_id" {
-#   value      = "${gitlab_group.group.id}"
-#   depends_on = ["gitlab_group.group"]
-# }
+terraform {
+  required_version = ">= 0.11.0"
 
-output "project_id" {
-  value      = "${gitlab_project.project.id}"
-  depends_on = ["gitlab_project.project"]
+  # backend "s3" {
+  #   bucket                      = "galactus"
+  #   key                         = "foo"
+  #   region                      = ""
+  #   endpoint                    = ""
+  #   skip_region_validation      = true
+  #   skip_credentials_validation = true
+  # }
+
+  # backend "consul" {
+  #   address = ""
+  #   scheme  = "https"
+  #   path    = "galactus/foo"
+  # }
 }

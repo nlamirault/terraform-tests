@@ -12,12 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# output "group_id" {
-#   value      = "${gitlab_group.group.id}"
-#   depends_on = ["gitlab_group.group"]
-# }
-
-output "project_id" {
-  value      = "${gitlab_project.project.id}"
-  depends_on = ["gitlab_project.project"]
-}
+gitlab_token = "zBLxqfu_5HKzQHE5w5HA"

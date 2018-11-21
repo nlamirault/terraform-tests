@@ -13,40 +13,46 @@
 # limitations under the License.
 
 variable "group_name" {
-  type = "string"
+  type        = "string"
   description = "The name of this group."
 }
 
-variable "group_path" {
-  type = "string"
-  description = "The path of the group."
-}
+# variable "group_path" {
+#   type = "string"
+#   description = "The path of the group."
+# }
 
-variable "group_description" {
-  type    = "string"
-  description = "(Optional) The description of the group."
-  default = ""
-}
+# variable "group_description" {
+#   type    = "string"
+#   description = "(Optional) The description of the group."
+#   default = ""
+# }
 
-variable "group_visibility" {
-  type    = "string"
-  description = " (Optional) Visibility level of the group"
-  default = "public"
-}
+# variable "group_visibility" {
+#   type    = "string"
+#   description = " (Optional) Visibility level of the group"
+#   default = "public"
+# }
 
 variable "project_name" {
-  type = "string"
+  type        = "string"
   description = "The name of this project."
 }
 
 variable "project_description" {
-  type    = "string"
+  type        = "string"
   description = "(Optional) The description of the project."
-  default = ""
+  default     = ""
+}
+
+variable "namespace_id" {
+  type        = "string"
+  description = "(Optional) The namespace (group or user) of the project"
+  default     = ""
 }
 
 variable "project_visibility" {
-  type    = "string"
+  type        = "string"
   description = " (Optional) The visibility level of the project"
-  default = "public"
+  default     = "public"
 }

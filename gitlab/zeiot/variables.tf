@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# output "group_id" {
-#   value      = "${gitlab_group.group.id}"
-#   depends_on = ["gitlab_group.group"]
+variable "gitlab_token" {
+  description = "(Optional) This is the Gitlab personal access token."
+}
+
+# variable "gitlab_url" {
+#   description = "(Optional) This is the target GitLab base API endpoint."
 # }
 
-output "project_id" {
-  value      = "${gitlab_project.project.id}"
-  depends_on = ["gitlab_project.project"]
+variable "insecure" {
+  description = "(Optional) When set to true this disables SSL verification of the connection to the GitLab instance"
+  default     = false
 }
