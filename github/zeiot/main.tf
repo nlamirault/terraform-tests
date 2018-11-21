@@ -32,6 +32,7 @@ module "prometheus-repository" {
   name        = "prometheus"
   description = "Docker image to run Prometheus on ARM devices"
   topics      = ["prometheus", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "alertmanager-repository" {
@@ -39,6 +40,7 @@ module "alertmanager-repository" {
   name        = "alertmanager"
   description = "Docker image to run Alertmanager on ARM devices"
   topics      = ["prometheus", "alertmanager", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "node-exporter-repository" {
@@ -46,6 +48,7 @@ module "node-exporter-repository" {
   name        = "node-exporter"
   description = "Docker image to run Prometheus Node Exporter on ARM devices"
   topics      = ["prometheus", "node-exporter", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "coredns-repository" {
@@ -53,6 +56,7 @@ module "coredns-repository" {
   name        = "coredns"
   description = "Docker image to run CoreDNS on ARM devices"
   topics      = ["coredns", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "external-dns-repository" {
@@ -60,6 +64,7 @@ module "external-dns-repository" {
   name        = "external-dns"
   description = "Docker image to run Kubernetes ExternalDNS on ARM devices"
   topics      = ["external-dns", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "vault-repository" {
@@ -67,6 +72,7 @@ module "vault-repository" {
   name        = "vault"
   description = "Docker image to run Hashicorp Vault on ARM devices"
   topics      = ["vault", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "ark-repository" {
@@ -74,13 +80,15 @@ module "ark-repository" {
   name        = "ark"
   description = "Docker image to run Heptio Ark on ARM devices"
   topics      = ["ark", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "influxdb-repository" {
   source      = "../modules/repository"
-  name        = "infludb"
+  name        = "influxdb"
   description = "Docker image to run InfluxDB on ARM devices"
   topics      = ["influxdb", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "grafana-repository" {
@@ -88,6 +96,7 @@ module "grafana-repository" {
   name        = "grafana"
   description = "Docker image to run Grafana on ARM devices"
   topics      = ["grafana", "arm", "galactus"]
+  auto_init   = false
 }
 
 module "kube-state-metrics-repository" {
@@ -95,18 +104,21 @@ module "kube-state-metrics-repository" {
   name        = "kube-state-metrics"
   description = "Docker image to run Kubernetes Kubestatemetrics on ARM devices"
   topics      = ["kube-state-metrics", "arm", "galactus"]
+  auto_init   = false
 }
 
-module "cockroachdb-repository" {
-  source      = "../modules/repository"
-  name        = "cockroachdb"
-  description = "Docker image to run CockroachDB on ARM devices"
-  topics      = ["cockroachdb", "arm", "galactus"]
-}
+# module "cockroachdb-repository" {
+#   source      = "../modules/repository"
+#   name        = "cockroachdb"
+#   description = "Docker image to run CockroachDB on ARM devices"
+#   topics      = ["cockroachdb", "arm", "galactus"]
+#   auto_init   = false
+# }
 
 module "nats-repository" {
   source      = "../modules/repository"
   name        = "nats"
   description = "Docker image to run Nats.io on ARM devices"
   topics      = ["nats", "arm", "galactus"]
+  auto_init   = false
 }
