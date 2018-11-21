@@ -13,10 +13,12 @@
 # limitations under the License.
 
 variable "name" {
-  type = "string"
+  type        = "string"
+  description = "The name of the project."
 }
 
 variable "columns" {
-  type    = "list"
-  default = ["Backlog", "Todo", "Doing", "Done"]
+  type        = "list"
+  description = "(Optional) The names of the columns."
+  default     = ["Backlog", "Todo", "Doing", "Done"]
 }

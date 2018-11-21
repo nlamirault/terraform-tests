@@ -13,22 +13,29 @@
 # limitations under the License.
 
 variable "name" {
-  type = "string"
+  type        = "string"
+  description = "The name of the repository."
 }
 
 variable "description" {
-  type = "string"
+  type        = "string"
+  description = "A description of the repository."
 }
 
 variable "private" {
-  default = false
+  type        = "boolean"
+  description = "(Optional) Visibility of the project."
+  default     = false
 }
 
 variable "auto_init" {
-  default = true
+  type        = "boolean"
+  description = "(Optional) Produce an initial commit or not."
+  default     = true
 }
 
 variable "topics" {
-  type    = "list"
-  default = []
+  type        = "list"
+  description = "(Optional) The list of topics of the repository."
+  default     = []
 }

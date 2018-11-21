@@ -115,7 +115,7 @@ resource "github_issue_label" "STATUS_AVAILABLE" {
   color      = "c2e0c6"
 }
 
-resource "github_issue_label" "STATUS_" {
+resource "github_issue_label" "STATUS_BLOCKED" {
   repository = "${github_repository.repository.name}"
   name       = "status/blocked"
   color      = "ee0701"

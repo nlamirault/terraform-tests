@@ -13,17 +13,30 @@
 # limitations under the License.
 
 variable "name" {
-  type = "string"
+  type        = "string"
+  description = "The name of the team."
 }
 
-variable "maintainer_members" {
-  default = []
-}
-
-variable "members" {
-  default = []
+variable "description" {
+  type        = "string"
+  description = "(Optional) A description of the team"
+  default     = ""
 }
 
 variable "privacy" {
-  default = "secret"
+  type        = "string"
+  description = "(Optional) The level of privacy for the team."
+  default     = "secret"
+}
+
+variable "maintainer_members" {
+  type        = "list"
+  description = "(Optional) The usernames to add to the team as maintainer"
+  default     = []
+}
+
+variable "members" {
+  type        = "list"
+  description = "(Optional) The usernames to add to the team as members"
+  default     = []
 }
