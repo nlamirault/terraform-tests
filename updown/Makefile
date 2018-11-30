@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-APP="Galactus / Gitlab"
+APP="Galactus / UpDown"
 
 NO_COLOR=\033[0m
 OK_COLOR=\033[32;01m
