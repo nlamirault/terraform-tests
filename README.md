@@ -14,6 +14,14 @@ Terraforming ...
 * [x] Define your projects, organizations, teams on Github
 * [x] Define your projects, groups on Gitlab
 
+## Meetings
+
+* [x] Google Calendar
+
+## Monitoring
+
+* [x] Updown.io
+
 
 ## Changelog
 
