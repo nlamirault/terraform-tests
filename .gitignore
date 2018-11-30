@@ -30,6 +30,12 @@ gcalendar/foo/.terraform
 gcalendar/foo/*.tfstate
 gcalendar/foo/*.tfstate.backup
 
+updown/foo/.terraform
+updown/foo/*.tfstate
+updown/foo/*.tfstate.backup
+
+updown/personal
+
 # Editors
 .vscode
 *~
