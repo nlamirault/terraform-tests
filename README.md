@@ -20,7 +20,8 @@ Terraforming ...
 
 ## Monitoring
 
-* [x] Updown.io
+* [x] Updown
+* [x] UptimeRobot
 
 
 ## Changelog
