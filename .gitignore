@@ -26,6 +26,10 @@ gitlab/zeiot/.terraform
 gitlab/zeiot/*.tfstate
 gitlab/zeiot/*.tfstate.backup
 
+gcalendar/foo/.terraform
+gcalendar/foo/*.tfstate
+gcalendar/foo/*.tfstate.backup
+
 # Editors
 .vscode
 *~
