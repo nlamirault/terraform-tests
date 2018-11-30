@@ -13,15 +13,15 @@
 # limitations under the License.
 
 resource "gitlab_group" "group" {
-  name = "galactus-gitlab"
-  path = "galactus-gitlab"
+  name             = "galactus-gitlab"
+  path             = "galactus-gitlab"
   visibility_level = "public"
 }
 
 module "bar-project" {
-  source     = "../modules/project"
-  group_name = "galactus-gitlab"
+  source              = "../modules/project"
+  group_name          = "galactus-gitlab"
   project_name        = "bar"
-  namespace_id = "${gitlab_group.group.id}"
+  namespace_id        = "${gitlab_group.group.id}"
   project_description = "The bar project for Galactus Foo"
 }
