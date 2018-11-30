@@ -36,6 +36,12 @@ updown/foo/*.tfstate.backup
 
 updown/personal
 
+uptimerobot/foo/.terraform
+uptimerobot/foo/*.tfstate
+uptimerobot/foo/*.tfstate.backup
+
+uptimerobot/personal
+
 # Editors
 .vscode
 *~
