@@ -24,6 +24,7 @@ resource "gitlab_project" "project" {
   namespace_id     = "${var.namespace_id}"
   description      = "${var.project_description}"
   visibility_level = "${var.project_visibility}"
+  default_branch   = "master"
 
   lifecycle {
     prevent_destroy = true
