@@ -42,6 +42,12 @@ uptimerobot/foo/*.tfstate.backup
 
 uptimerobot/personal
 
+gke/foo/.terraform
+gke/foo/*.tfstate
+gke/foo/*.tfstate.backup
+gke/foo/galactus.json
+
+
 # Editors
 .vscode
 *~
