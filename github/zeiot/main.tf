@@ -122,3 +122,12 @@ module "nats-repository" {
   topics      = ["nats", "arm", "galactus"]
   auto_init   = false
 }
+
+module "minio-repository" {
+  source      = "../modules/repository"
+  name        = "minio"
+  description = "Docker image to run Minio on ARM devices"
+  topics      = ["minio", "arm", "galactus"]
+  auto_init   = false
+}
+

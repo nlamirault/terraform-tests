@@ -105,3 +105,12 @@ module "kube-state-metrics" {
   namespace_id        = "${gitlab_group.zeiot.id}"
   project_description = "Docker image to run Kubernetes Kubestatemetrics on ARM devices"
 }
+
+module "minio" {
+  source              = "../modules/project"
+  project_name        = "minio"
+  group_name          = "zeiot"
+  namespace_id        = "${gitlab_group.zeiot.id}"
+  project_description = "Docker image to run Minio on ARM devices"
+}
+

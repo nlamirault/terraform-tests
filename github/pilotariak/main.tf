@@ -27,57 +27,59 @@ module "kanban-project" {
   name   = "Kanban Project"
 }
 
-module "test-repository" {
+module "trinquet-repository" {
   source      = "../modules/repository"
-  name        = "test"
-  description = "Test"
+  name        = "trinquet"
+  description = "Manage Pelota leagues, tournaments"
+  topics      = ["pelota", "tournament", "galactus"]
+}
+
+module "paleta-repository" {
+  source      = "../modules/repository"
+  name        = "paleta"
+  description = "Pelota competitions for the terminal"
+  topics      = ["pelota", "terminal", "galactus"]
+}
+
+
+module "berriz-repository" {
+  source      = "../modules/repository"
+  name        = "berriz"
+  description = ""
   topics      = ["pelota", "galactus"]
 }
 
-# module "trinquet-repository" {
-#   source      = "../modules/repository"
-#   name        = "trinquet"
-#   description = "Manage Pelota leagues, tournaments"
-#   topics      = ["pelota", "tournament", "galactus"]
-# }
+
+module "xare-repository" {
+  source      = "../modules/repository"
+  name        = "xare"
+  description = "CLI to manage Pelota tournaments"
+  topics      = ["pelota", "galactus"]
+}
 
 
-# module "paleta-repository" {
-#   source      = "../modules/repository"
-#   name        = "paleta"
-#   description = "Pelota competitions for the terminal"
-#   topics      = ["pelota", "terminal", "galactus"]
-# }
+module "jo-repository" {
+  source      = "../modules/repository"
+  name        = "jo"
+  description = "Devstack"
+  topics      = ["pelota", "galactus"]
+}
 
 
-# module "berriz-repository" {
-#   source      = "../modules/repository"
-#   name        = "berriz"
-#   description = ""
-#   topics      = ["pelota", "galactus"]
-# }
 
 
-# module "xare-repository" {
-#   source      = "../modules/repository"
-#   name        = "xare"
-#   description = "CLI to manage Pelota tournaments"
-#   topics      = ["pelota", "galactus"]
-# }
+#module "pilotari-repository" {
+#  source      = "../modules/repository"
+#  name        = "pilotari"
+#  description = "Mobile application for Android and iOS to follow all the sports news of the Basque pelota"
+#  topics      = ["pelota", "mobile", "galactus"]
+#}
 
 
-# module "pilotari-repository" {
-#   source      = "../modules/repository"
-#   name        = "pilotari"
-#   description = "Mobile application for Android and iOS to follow all the sports news of the Basque pelota"
-#   topics      = ["pelota", "mobile", "galactus"]
-# }
-
-
-# module "pilotariak-webapp-repository" {
-#   source      = "../modules/repository"
-#   name        = "pilotariak-webapp"
-#   description = "Pilotariak web frontend"
-#   topics      = ["pelota", "galactus"]
-# }
+#module "pilotariak-webapp-repository" {
+#  source      = "../modules/repository"
+#  name        = "pilotariak-webapp"
+#  description = "Pilotariak web frontend"
+#  topics      = ["pelota", "galactus"]
+#}
 

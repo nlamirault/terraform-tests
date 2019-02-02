@@ -31,7 +31,7 @@ variable "private" {
 variable "auto_init" {
   type        = "string"
   description = "(Optional) Produce an initial commit or not."
-  default     = true
+  default     = false
 }
 
 variable "topics" {
