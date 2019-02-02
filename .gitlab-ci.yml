@@ -37,7 +37,7 @@ plan:github:
   script:
     - cd github/zeiot && terraform plan -out "planfile" -var-file=example.tfvars
   dependencies:
-    - validate
+    - validate:github
   artifacts:
     paths:
       - planfile
