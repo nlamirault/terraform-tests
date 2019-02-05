@@ -47,6 +47,10 @@ gke/foo/*.tfstate
 gke/foo/*.tfstate.backup
 gke/foo/galactus.json
 
+gandi/foo/.terraform
+gandi/foo/*.tfstate
+gandi/foo/*.tfstate.backup
+gandi/personal
 
 # Editors
 .vscode
