@@ -27,25 +27,39 @@ stages:
   - plan
   - apply
 
-.terraform_setup: &terraform_setup |
+.terraform_github_setup: &terraform_github_setup |
   cd github
   terraform init foo
   terraform init zeiot
   terraform init pilotariak
 
+
+.terraform_gitlab_setup: &terraform_gitlab_setup |
+  cd github
+  terraform init zeiot
+
+
+
 validate:github:
   stage: validate
   script:
-    - *terraform_setup
+    - *terraform_github_setup
     - pwd
     - terraform validate -var-file=foo/galactus.tfvars.example foo
     - terraform validate -var-file=zeiot/galactus.tfvars.example zeiot
     - terraform validate -var-file=pilotariak/galactus.tfvars.example pilotariak
 
+validate:gitlab:
+  stage: validate
+  script:
+    - *terraform_github_setup
+    - pwd
+    - terraform validate -var-file=zeiot/galactus.tfvars.example zeiot
+
 plan:github:
   stage: plan
   script:
-    - *terraform_setup
+    - *terraform_github_setup
     - pwd
     - terraform plan -out "planfile" -var-file=foo/galactus.tfvars.example foo
     - terraform plan -out "planfile" -var-file=zeiot/galactus.tfvars.example zeiot
