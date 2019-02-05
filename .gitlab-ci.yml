@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# Copyright (C) 2018-2019 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,15 +27,29 @@ stages:
   - plan
   - apply
 
+.terraform_setup: &terraform_setup |
+  cd github
+  terraform init foo
+  terraform init zeiot
+  terraform init pilotariak
+
 validate:github:
   stage: validate
   script:
-    - cd github/zeiot && terraform validate -var-file=example.tfvars
+    - *terraform_setup
+    - pwd
+    - terraform validate -var-file=foo/galactus.tfvars.example foo
+    - terraform validate -var-file=zeiot/galactus.tfvars.example zeiot
+    - terraform validate -var-file=pilotariak/galactus.tfvars.example pilotariak
 
 plan:github:
   stage: plan
   script:
-    - cd github/zeiot && terraform plan -out "planfile" -var-file=example.tfvars
+    - *terraform_setup
+    - pwd
+    - terraform plan -out "planfile" -var-file=foo/galactus.tfvars.example foo
+    - terraform plan -out "planfile" -var-file=zeiot/galactus.tfvars.example zeiot
+    - terraform plan -out "planfile" -var-file=pilotariak/galactus.tfvars.example pilotariak
   dependencies:
     - validate:github
   artifacts:
