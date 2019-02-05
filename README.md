@@ -49,6 +49,10 @@ Enable the bucket’s versioning:
 * [x] Updown
 * [x] UptimeRobot
 
+### DNS
+
+* [-] Gandi
+
 
 ## Changelog
 
