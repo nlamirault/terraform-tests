@@ -1,10 +1,13 @@
 # Terraform
 #
 github/.terraform/
-github/*/*.tfvars
+github/**/*.tfvars
 
 gitlab/.terraform/
-gitlab/*.tfvars
+gitlab/**/*.tfvars
+
+gitea/.terraform/
+gitea/**/*.tfvars
 
 github/foo/.terraform
 github/foo/*.tfstate
@@ -25,6 +28,10 @@ gitlab/foo/*.tfstate.backup
 gitlab/zeiot/.terraform
 gitlab/zeiot/*.tfstate
 gitlab/zeiot/*.tfstate.backup
+
+gitea/foo/.terraform
+gitea/foo/*.tfstate
+gitea/foo/*.tfstate.backup
 
 gcalendar/foo/.terraform
 gcalendar/foo/*.tfstate
