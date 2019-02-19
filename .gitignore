@@ -7,7 +7,9 @@ gitlab/.terraform/
 gitlab/**/*.tfvars
 
 gitea/.terraform/
-gitea/**/*.tfvars
+gitea/foo/*.tfstate
+gitea/foo/*.tfstate.backup
+gitea/foo/galactus.tfvars
 
 github/foo/.terraform
 github/foo/*.tfstate
