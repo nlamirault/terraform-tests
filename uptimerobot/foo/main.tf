@@ -14,19 +14,4 @@
 
 terraform {
   required_version = ">= 0.11.0"
-
-  # backend "s3" {
-  #   bucket                      = "galactus"
-  #   key                         = "foo"
-  #   region                      = ""
-  #   endpoint                    = ""
-  #   skip_region_validation      = true
-  #   skip_credentials_validation = true
-  # }
-
-  # backend "consul" {
-  #   address = ""
-  #   scheme  = "https"
-  #   path    = "galactus/foo"
-  # }
 }

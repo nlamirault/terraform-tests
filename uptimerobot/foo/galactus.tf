@@ -12,9 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-resource "uptimerobot_monitor" "google_com" {
-  url           = "http://google.com"
-  type          = "https"
-  friendly_name = "Google"
+data "uptimerobot_account" "account" {}
+
+data "uptimerobot_alert_contact" "default_alert_contact" {
+  friendly_name = "${data.uptimerobot_account.account.email}"
 }
 
+resource "uptimerobot_monitor" "google_com" {
+  url           = "http://google.com"
+  type          = "http"
+  friendly_name = "Google"
+}
