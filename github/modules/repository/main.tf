@@ -32,21 +32,21 @@ resource "github_branch_protection" "repository_protection" {
   branch         = "master"
   enforce_admins = true
 
-  required_status_checks {
-    strict   = false
-    contexts = ["ci/travis"]
-  }
+  # required_status_checks {
+  #   strict   = false
+  #   contexts = ["ci/travis"]
+  # }
 
-  required_pull_request_reviews {
-    dismiss_stale_reviews = true
-    dismissal_users       = ["${data.github_user.push_access_users.*.login}"]
-    dismissal_teams       = ["${data.github_team.push_access_teams.*.slug}"]
-  }
+  # required_pull_request_reviews {
+  #   dismiss_stale_reviews = true
+  #   dismissal_users       = ["${data.github_user.push_access_users.*.login}"]
+  #   dismissal_teams       = ["${data.github_team.push_access_teams.*.slug}"]
+  # }
 
-  restrictions {
-    users = ["${data.github_user.push_access_users.*.login}"]
-    teams = ["${data.github_team.push_access_teams.*.slug}"]
-  }
+  # restrictions {
+  #   users = ["${data.github_user.push_access_users.*.login}"]
+  #   teams = ["${data.github_team.push_access_teams.*.slug}"]
+  # }
 }
 
 resource "github_issue_label" "KIND_BUG" {
